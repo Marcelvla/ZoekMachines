@@ -9,7 +9,7 @@ The regular search option uses the multi-match query from ElasticSearch. When yo
 
 
 ## Wordcloud
-Since our documents are very small it's not very relevant to make a wordcloud of every single card. Therefore we have chosen to make a wordcloud for every expansion set in our dataset. Usually there is a general theme for an expansion and this will show in the wordclouds. We used tf-idf weighting to compute the importance of words for the wordcloud. 
+Since our documents are very small it's not very relevant to make a wordcloud of every single card. Therefore we have chosen to make a wordcloud for every expansion set in our dataset. Usually there is a general theme for an expansion and this will show in the wordclouds. We used tf-idf weighting to compute the importance of words for the wordcloud. Surprisingly we found that a lot of english stopwords still had pretty high tfidf scores compared to other terms, so we filtered those out leaving mostly keywords. 
 
 ## Pie chart
 
