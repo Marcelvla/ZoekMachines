@@ -3,21 +3,23 @@
 In the 
 
 ## Regular Search
-The regular search option uses the multi-match query from ElasticSearch. When you use this you can search multiple fields from your document, which is especially helpfull for our dataset, because there are a couple of information fields that are important for beign able to find the card you're looking for. Keywords are very important in cardgames. Therefore a lot of the time you would have single word queries. An example of this would be 'a card with Flying'. When using single word queries we'd like the field with the highest score, so we use the option 'best_fields' for our query. When having a query with more than just a keyword we'd like the highest score from more tdocumentshan just one field, so we use the option 'most_fields' for that. 
+The regular search option uses the multi-match query from ElasticSearch. When you use this you can search multiple fields from your document, which is especially helpfull for our dataset, because there are a couple of information fields that are important for beign able to find the card you're looking for. Keywords are very important in cardgames. Therefore a lot of the time you would have single word queries. An example of this would be 'a card with Flying'. When using single word queries we'd like the field with the highest score, so we use the option 'best_fields' for our query. When having a query with more than just a keyword we'd like the highest score from more tdocumentshan just one field, so we use the option 'most_fields' for that. The Results are accompanied by a bar graph showing the converted mana costs of the results.
 
 ## Advanced Search
 
+The Advanced search provides the user with the option to search cards based on multiple values. This is helpfull to the user when having a more complicated search request like "I need a red creature with a converted mana cost of 2". The advanced search gives the user the possibility to filter on the card type, colour, converted mana cost and the set the card belongs to. These kind of fields are very important to the deck building part of cardgames as it allows users build a deck with cards to play on each turn.
 
 ## Wordcloud
 Since our documents are very small it's not very relevant to make a wordcloud of every single card. Therefore we have chosen to make a wordcloud for every expansion set in our dataset. Usually there is a general theme for an expansion and this will show in the wordclouds. We used tf-idf weighting to compute the importance of words for the wordcloud. Surprisingly we found that a lot of english stopwords still had pretty high tfidf scores compared to other terms, so we filtered those out leaving mostly keywords. 
 
 ## Pie chart
 
-
+The pie charts provided in the notebook give insight into the type compisition of sets of cards and the finaly the type compisition of all the sets under "set". This provides insight into the kinds of decks a user could build using the sets.
+For instance the "WAR" set has a high amount of "planeswalkers" and around this information decks can be build.
 
 ## Provide Faceted Search 
 
-
+The Faceted search function helps the user filter the results from a simple query in order the get the right results for the information need. The funtion uses the simple query funtion to get the initial results and pandas is used to further filter the results. The user can filter on colour and converted mana cost if its enabled, this is usefull for the user with queries like "Flying red creature".
 
 ## Evaluating queries
 ### 1
