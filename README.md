@@ -1,5 +1,7 @@
 # ElasticSearch for Magic the Gathering
 
+Link to slides: https://docs.google.com/presentation/d/1Ihd82WwRZyRckXw9BgBLKgiOKr7oqVBXqdvGCuAbN9A/edit?usp=sharing
+
 ## Regular Search
 The regular search option uses the multi-match query from ElasticSearch. When you use this you can search multiple fields from your document, which is especially helpfull for our dataset, because there are a couple of information fields that are important for beign able to find the card you're looking for. Keywords are very important in cardgames. Therefore a lot of the time you would have single word queries. An example of this would be 'a card with Flying'. When using single word queries we'd like the field with the highest score, so we use the option 'best_fields' for our query. When having a query with more than just a keyword we'd like the highest score from more documents than just one field, so we use the option 'most_fields' for that. The results are accompanied by a bar graph showing the converted mana costs of the results.
 
